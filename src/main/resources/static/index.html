@@ -8,27 +8,27 @@
         <meta name='keywords' content='html5, css3,web, fidélitas'>
     </head>
     <body>
-        <header id='encabezado'><!--Etiqueta para ofrecerle al browser info de que es un encabezado-->
+        <header id='encabezado'> <!--Etiqueta para ofrecerle al browser info de que es un encabezado-->
             <h1>TechShop</h1>
         </header>
-        <nav id='menu'> <!--esta etiqueta es para ilustrarle al browser que posiblemente es un menú-->
+         <nav id='menu'> <!--esta etiqueta es para ilustrarle al browser que posiblemente es un menú-->
            <a href='Ejemplo9.html'>Back</a>
            <a href='index.html'>Home</a>
            <a href='Ejemplo2.html'>Next</a><br>
-        </nav>
+         </nav>
         <aside id='barralateral'><!--Etiqueta para indicar que es una barra lateral al final, puede ser a la izquierda o a la derecha, y pueden ser varias-->
            <h2>Productos más vendidos</h2>
            <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit praesent penatibus venenatis rutrum non feugiat, condimentum aliquet tortor porttitor orci. Torquent ultricies id ut class dapibus sem risus hac erat tortor, parturient tellus mollis conubia nostra lacus non fusce imperdiet, ac semper donec turpis elementum per vehicula pharetra malesuada. Sollicitudin magnis phasellus in facilisis tristique cubilia ligula natoque non maecenas sem, nam bibendum taciti himenaeos quisque nascetur eros molestie vel.</p>
         </aside>
         
-        <section>
+        <section id="contenido">
           <h2>Articulos principales</h2>
           <article>
               <header>Portail XRT 5000</header>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit at sodales class fusce ad, laoreet sagittis varius maecenas pharetra. Pulvinar ut mauris nisi euismod maecenas consequat tortor tellus, imperdiet venenatis sagittis libero nibh sociis mus placerat interdum, nunc natoque lacinia himenaeos rutrum platea pharetra. Cum metus mus lacinia netus magnis libero commodo, mattis sapien orci magna suspendisse lectus, felis lobortis nunc consequat per egestas.</p>
               <footer>Agregar al carrito</footer>
               <figure>
-                  <img src="Images/portail.jpg" alt="Desktop XRT"/>
+                  <img src="Images/portail.jpg" alt="Desktop XRT" width='100'/>
               </figure>
           </article>
           <article>
@@ -37,6 +37,7 @@
              <footer>Agregar al carrito</footer>
              <figure>
                  <img src="Images/compu.jpg" alt="Alienware"/>
+                 <figcaption>Más vendido</figcaption>
              </figure>
           </article>
           <article>
@@ -45,11 +46,50 @@
               <footer>Agregar al carrito</footer>
               <figure>
                   <img src="Images/impresora.jpg" alt="3d print"/>
+                  <figcaption>Más económico</figcaption>
               </figure>
+          </article>
+          <article>
+              <header>Resumen líneas generales</header>
+                <table border="0">
+                  <thead>
+                      <tr id="encabezadoTabla">
+                          <th>Código</th>
+                          <th>Detalle</th>
+                      </tr>
+                  </thead>
+                  <tbody id="tablaresumen">
+                      <tr>
+                          <td>1</td>
+                          <td>Egestas cubilia est senectus feugiat potenti natoque</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>bibendum porta lectus velit habitasse</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>sociosqu pretium nibh vestibulum nulla facilisis massa</td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>Aliquet dictumst fringilla laoreet purus nec ultrices</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>velit metus platea convallis praesent</td>
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>fermentum vivamus eu euismod vel sociis turpis senectus dui se</td>
+                      </tr>
+                  </tbody>
+              </table>
+
           </article>
         </section>
         
-        <footer>Derechos reservados &COPY; 2022<address>Tel 8889-7764</address> </footer>
+        <footer id="piepagina">Derechos reservados &COPY; 2022<address style="display: inline">Tel 8889-7764</address> </footer>
       
     </body>
 </html>
