@@ -5,7 +5,7 @@ import com.tienda.domain.Articulo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Transactional; 
 
 @Service
 public class ArticuloServicelmpl1 implements ArticuloService {
@@ -37,6 +37,11 @@ public class ArticuloServicelmpl1 implements ArticuloService {
     @Transactional(readOnly = true)
     public Articulo getArticulo(Articulo cliente) {
         return clienteDao.findById(cliente.getIdArticulo()).orElse(null);
+    }
+
+    @Override
+    public Articulo getArticulo(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     

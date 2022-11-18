@@ -37,7 +37,7 @@ public class CategoriaServicelmpl implements CategoriaService {
     @Override
     @Transactional(readOnly = true)
     public Categoria getCategoria(Categoria cliente) {
-        return clienteDao.findById(cliente.getIdCliente() ).orElse(null);
+        return clienteDao.findById(cliente.getIdClientes () ).orElse(null);
         
     }
     

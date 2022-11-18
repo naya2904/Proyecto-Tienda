@@ -11,6 +11,8 @@ public interface ArticuloService {
     public void delete (Articulo cliente);
     
     public Articulo getArticulo (Articulo cliente);
+
+    public Articulo getArticulo(boolean b);
     
     
 }

@@ -25,11 +25,14 @@ public class ArticuloController {
              return "/articulo/listado";
     }
     
-        @GetMapping ("/nuevo/nuevo")
-        public String nuevoArticulo (Articulo articulo) {
+        @GetMapping ("/articulo/nuevo")
+        public String nuevoArticulo (Articulo articulo, Model model) {
+            var articulos=articuloService.getArticulos(true);    
+        Object categorias = null;
+        model.addAttribute("categorias",categorias);
             return "/articulo/modifica";       
   }
-        @PostMapping ("/articulo/guardarArticulo")
+        @PostMapping ("/articulo/guardar")
         public String guardarArticulo (Articulo articulo) {
             articuloService.save(articulo);
             return "redirect:/articulo/listado";
@@ -38,8 +41,9 @@ public class ArticuloController {
         
         @GetMapping ("/articulo/modificar/ {idArticulo}")
         public String modificarArticulo (Articulo articulo, Model model) {
-            articulo = articuloService.getArticulo (articulo);
-            model.addAttribute("articulo", articulo);
+            articulo = articuloService.getArticulo (true);
+        Object categorias = null;
+            model.addAttribute("categorias", categorias);
             return "/articulo/modificar";
         }
         
