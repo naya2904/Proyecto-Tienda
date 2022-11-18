@@ -6,10 +6,23 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <header th:fragment="header">
+        <header th:fragment="header"> class='encabezado'> <!--Etiqueta para ofrecerle al browser info de que es un encabezado-->
+         <nav Class='nav'> <!--esta etiqueta es para ilustrarle al browser que posiblemente es un menú-->
+           <a th:href='@{/}' class="logo nav-link">TechShop</a>
+           <ul class="nav-menu">
+               <li class="nav-menu-item">
+                   <a class="nav-menu-link nav-link" th: href="@{/cliente/listado}">Clientes</a>
+               </li>
+               <li class="nav-menu-item">
+                   <a class="nav-menu-link nav-link" th: href="@{/categoria/listado}">Categorias</a>
+               </li>
+               <li class="nav-menu-item">
+                   <a class="nav-menu-link nav-link" th: href="@{/articulo/listado}">Articulos</a>
+               </li>
+         </nav>
             <h1>TechShop</h1>
             
-            <footer th:fragmnet="header">
+            <footer th:fragmnet="header" class="footer">
                 <p>&COPY Derechos Reservados 2022</p>
              </footer>   
         </header>
